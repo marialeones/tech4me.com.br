@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+     min-height: 100vh;
+    background-color: darkgray;
+        width: 90%;
+        max-width: 10000px;
+        margin: 0 auto;
+        font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+      }
+.container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.bolhas{
+  position: absolute;
+  display: flex;
+}
+.bolhas span{
+  width: 30px;
+  height: 30px;
+  background-color: #e5ff00;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #e5ff0044,
+  0 0 50px #e5ff00,
+  0 0 100px #e5ff00;
+  animation: animar calc(30s / var(--i)) linear infinite;
+
+}
+@keyframes animar{
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+.bolhas span:nth-of-type(even) {
+background-color: #2d2d2d;
+box-shadow: 0 0 0 10px #2d2d2d44,
+0 0 50px #2d2d2d,
+0 0 100px #2d2d2d;
+}
+
+h1{
+    background-color:cornsilk;
+    transition:all 2s;
+    display: inline;
+    border:1px solid black
+
+}
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  ul {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
